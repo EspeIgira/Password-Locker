@@ -1,7 +1,7 @@
 import unittest
 from user import User
 
-class TestContact(unittest.TestCase):
+class TestUser(unittest.TestCase):
 
     #New User information
 
@@ -19,14 +19,29 @@ class TestContact(unittest.TestCase):
         self.assertEqual(self.new_user.password,"******")
         self.assertEqual(self.new_user.email,"espeigira@ms.com")
     
-    #Save the new User
+    #Save the new User Account
+
     def test_save_user(self):
         '''
         test_save_user test case to test if the user object is saved into
          user list.
         '''
-        self.new_user.save_user() # saving the new contact
+        self.new_user.save_user() 
         self.assertEqual(len(User.user_list),1)
+
+    #Delete user object
+
+     def test_delete_user(self):
+            '''
+            test_delete_user to test if we can remove a user from our user list
+            '''
+            self.new_user.save_user()
+            test_user = user("Instagram","WeraSu","@@@@@@","werasu@user.com") # new contact
+            test_user.save_user()
+
+            self.new_user.delete_user()
+            self.assertEqual(len(User.user_list),1)
+
 
 
 
