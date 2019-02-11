@@ -14,7 +14,6 @@ class User:
         self.email = email
     
     #Save user method
-    contact_list = [] 
  
     def save_user(self):
 
@@ -25,11 +24,20 @@ class User:
         User.user_list.append(self)
 
     #Delete user method
-    
-     def delete_user(self):
+    def delete_user(self):
 
         '''
         delete_user method deletes a saved user from user_list
         '''
 
         User.user_list.remove(self)
+    
+    
+    # To let user information to pass
+    @classmethod
+    def find_by_email(cls,email):
+     
+
+     for user in cls.user_list:
+        if user.email == email:
+            return user 

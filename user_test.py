@@ -4,7 +4,6 @@ from user import User
 class TestUser(unittest.TestCase):
 
     #New User information
-
     def setUp(self):
 
         self.new_user = User("Facebook","EspeIgira","******","espeigira@ms.com") # create user object
@@ -29,18 +28,46 @@ class TestUser(unittest.TestCase):
         self.new_user.save_user() 
         self.assertEqual(len(User.user_list),1)
 
+
+    #Save the multiple Users
+    def tearDown(self):
+            '''
+            tearDown method that does clean up after each test case has run.
+            '''
+            User.user_list = []
+
+    def test_save_multiple_user(self):
+            
+            self.new_user.save_user()
+            test_user = User("Instagram","WeraSu","@@@@@@","werasu@user.com")
+            test_user.save_user()
+            self.assertEqual(len(User.user_list),2)
+
     #Delete user object
 
-     def test_delete_user(self):
+    def test_delete_user(self):
             '''
             test_delete_user to test if we can remove a user from our user list
             '''
             self.new_user.save_user()
-            test_user = user("Instagram","WeraSu","@@@@@@","werasu@user.com") # new contact
+            test_user = User("Instagram","WeraSu","@@@@@@","werasu@user.com") 
             test_user.save_user()
 
             self.new_user.delete_user()
             self.assertEqual(len(User.user_list),1)
+
+    #Display user information
+    def test_find_user_by_email(self):
+      
+
+        self.new_user.save_user()
+        test_user = User("Instagram","WeraSu","@@@@@@","werasu@user.com") 
+        test_user.save_user()
+
+        found_user = User.find_by_email("werasu@user.com")
+
+        self.assertEqual(found_user.Username,test_user.Username)
+  
 
 
 
