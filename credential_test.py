@@ -11,3 +11,8 @@ class TestCredential(unittest.TestCase):
 
         self.assertEqual(self.new_user.Username,"EspeIgira")
         self.assertEqual(self.new_user.password,"******")
+    
+    def test_save_credential(self):
+        
+        self.new_credential.save_credential() 
+        self.assertEqual(len(Credential.credential_list),1)
