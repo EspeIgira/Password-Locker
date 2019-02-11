@@ -8,7 +8,10 @@
 
 ## Setup/Installation Requirements
 
-Terminal and Visual studio code.
+Terminal
+
+Any need of using this Application, You can clone it.(See link below)
+https://github.com/EspeIgira/Password-Locker.git
 
 ## Technologies Used
 
