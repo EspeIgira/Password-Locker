@@ -1,11 +1,15 @@
 # Password-Locker
 
-  Its about creating paasword locker with users.
+  Its about creating Password Locker with users.
 
 ## Description
-{This is my portfolio about my background,Education and Experience}, {Created 10th December 2018}
+
+{Password Locker allows to create user accounts, generate and store their passwords.}, {Created 11th February 2019}
+
 ## Setup/Installation Requirements
+
 Browser and text editor.
+
 ## Technologies Used
 HTML Language and Css Stylesheet.
   
