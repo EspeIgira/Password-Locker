@@ -10,7 +10,7 @@
 
 Terminal
 
-Any need of using this Application, You can clone it.(See link below)
+Any need of using this Application, You can clone it.(See link)
 https://github.com/EspeIgira/Password-Locker.git
 
 ## Technologies Used
