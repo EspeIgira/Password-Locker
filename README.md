@@ -1,6 +1,6 @@
 # Password-Locker
- 
-    Password Locker allows to create user accounts, generate and store their passwords.
+
+  Its about creating paasword locker with users.
 
 ## Description
 {This is my portfolio about my background,Education and Experience}, {Created 10th December 2018}
