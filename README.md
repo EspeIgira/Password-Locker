@@ -8,10 +8,11 @@
 
 ## Setup/Installation Requirements
 
-Browser and text editor.
+Terminal and Visual studio code.
 
 ## Technologies Used
-HTML Language and Css Stylesheet.
+
+Python 3.6
   
 ## Authors
 
