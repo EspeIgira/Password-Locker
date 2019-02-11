@@ -1,12 +1,12 @@
 class User:
-    """
-    Class that generates new instances of contacts
-    """
-    user_list = [] # Empty user list
+    '''
+    Class that generates new instances of users
+    '''
+    user_list = []
 
     def __init__(self,user_account,Username,password,email):
-
-      # docstring to document
+        
+        # docstring to document
 
         self.user_account = user_account
         self.Username = Username
