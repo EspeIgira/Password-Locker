@@ -52,10 +52,7 @@ class Credentials:
         credential_found = Credentials.find_by_Username(Username)
         pyperclip.copy(credential_found.Username )
     
-    # @classmethod
-    # def delete_credential(cls):
-        
-    #     return cls.credential_list
+   
     
 
    

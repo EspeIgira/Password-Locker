@@ -67,10 +67,7 @@ class TestCredential(unittest.TestCase):
 
         self.assertEqual(self.new_credential.Username,pyperclip.paste())
 
-    # def test_delete_credential(self):
-        
-
-    #     self.assertEqual(Credentials.delete_credential(),Credentials.credential_list)
+    
      
 
 if __name__ == '__main__':
