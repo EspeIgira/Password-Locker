@@ -41,3 +41,18 @@ class User:
      for user in cls.user_list:
         if user.email == email:
             return user 
+
+
+    @classmethod
+    def user_exist(cls,email):
+        
+        for user in cls.user_list:
+            if user.email== email:
+                    return True
+
+        return False
+
+    @classmethod
+    def display_user(cls):
+        
+        return cls.user_list

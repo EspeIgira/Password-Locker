@@ -56,7 +56,7 @@ class TestUser(unittest.TestCase):
             self.new_user.delete_user()
             self.assertEqual(len(User.user_list),1)
 
-    #Display user information
+    #Find user information
     def test_find_user_by_email(self):
       
 
@@ -67,8 +67,24 @@ class TestUser(unittest.TestCase):
         found_user = User.find_by_email("werasu@user.com")
 
         self.assertEqual(found_user.Username,test_user.Username)
-  
 
+
+    #Existing user
+    def test_user_exists(self):
+        
+
+        self.new_user.save_user()
+        test_user = User("Instagram","WeraSu","@@@@@@","werasu@user.com") # new user
+        test_user.save_user()
+        user_exists = User.user_exist("werasu@user.com")
+        self.assertTrue(user_exists)
+   
+    #Display user information
+
+    def test_display_all_user(self):
+        
+
+        self.assertEqual(User.display_user(),User.user_list)
 
 
 
