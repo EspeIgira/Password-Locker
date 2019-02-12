@@ -56,7 +56,7 @@ def main():
 
 
         while True:
-            print("Use these short codes : cc - create a new credential, dc - display credential, fc -find a credential, ex -exit the credential list ")
+            print("Use these short codes : cc - create a new credential, dc - display credential, fc -find a credential, del - delete credential, ex -exit the credential list ")
 
             short_code = input().lower()
 
@@ -106,13 +106,36 @@ def main():
                 else:
                     print("That credential does not exist")
 
-
             elif short_code == "ex":
                 print("Bye .......")
                 break
             else:
                 print("I really didn't get that. Please use the short codes")
 
+
+            
+
+            #delete user information
+
+            # elif short_code == 'del':
+
+            #     print("Delete password of credential list")
+
+            #     if delete_credential():
+            #         print("Here is a list of all your credential")
+            #         print('\n')
+
+            # # credential_list = ["Username,password"]
+            # # del credential_list["password"]
+
+            # print ("List credential after deleting are : ",end="")
+
+            # for credential_list in delete_credential():
+            #     print(f"{credential.password}")
+
+            #     print("\n")
+
+            
 
 if __name__ == '__main__':
 
