@@ -1,56 +1,61 @@
 #!/usr/bin/env python3.6
 from credential import Credentials
 
+
 def create_credential(Username,password):
-    '''
-    Function to create a new credential
-    '''
-    new_credential = Credentials(Username,password)
-    return new_credential
+        '''
+        Function to create a new credential
+        '''
+        new_credential = Credentials(Username,password)
+        return new_credential
 
 def save_credential(credential):
-    '''
-    Function to save credential
-    '''
-    credential.save_credential()
+        '''
+        Function to save credential
+        '''
+        credential.save_credential()
 
 def del_credential(credential):
-    '''
-    Function to delete a credential
-    '''
-    credential.delete_credential()
+        '''
+        Function to delete a credential
+        '''
+        credential.delete_credential()
 
 def find_credential(Username):
-    '''
-    Function that finds a credential by Username and returns the credential
-    '''
-    return Credentials.find_by_Username(Username)
+        '''
+        Function that finds a credential by Username and returns the credential
+        '''
+        return Credentials.find_by_Username(Username)
 
 def check_existing_credential(Username):
-    '''
-    Function that check if a credential exists with that Username and return a Boolean
-    '''
-    return Credentials.credential_exist(Username)
+        '''
+        Function that check if a credential exists with that Username and return a Boolean
+        '''
+        return Credentials.credential_exist(Username)
+        
 
 def display_credential():
-    '''
-    Function that returns all the saved credential
-    '''
-    return Credentials.display_credential()
+        
+        '''
+        Username = input()
+        Function that returns all the saved credential
+        '''
+        return Credentials.display_credential()
 
-#Main function for Credentials
+        #Main function for Credentials
 def main():
-    print("Hello Welcome to your credential list. What is your name?")
-    Username = input()
+        print("Login----------")
+        print("Hello Welcome to your credential list. What is your name?")
+        Username = input()
 
-    print("Hello Welcome to your credential list. What is your password?")
-    password = input()
+        print("Hello Welcome to your credential list. What is your password?")
+        password = input()
 
-    print(f"Hello {Username}. what would you like to do?")
-    print('\n')
-  
+        print(f"Hello {Username}. what would you like to do?")
+        print('\n')
 
-    while True:
+
+        while True:
             print("Use these short codes : cc - create a new credential, dc - display credential, fc -find a credential, ex -exit the credential list ")
 
             short_code = input().lower()
@@ -76,11 +81,11 @@ def main():
                     print("Here is a list of all your credential")
                     print('\n')
 
-                    for credential in display_credential():
+                for credential in display_credential():
                         print(f"{credential.Username} .....{credential.password}")
-
                         print('\n')
-                    else:
+
+                else:
                         print('\n')
                         print("You dont seem to have any credential saved yet")
                         print('\n')

@@ -40,8 +40,12 @@ def display_user():
 
 #Main function for User
 def main():
-    print("Hello Welcome to your user list. What is your name?")
+    print("Login----------")
+    print("Username")
     Username = input()
+
+    print("Password")
+    password = input()
 
     print(f"Hello {Username}. what would you like to do?")
     print('\n')

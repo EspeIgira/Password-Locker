@@ -11,7 +11,6 @@ class Credentials:
 
         self.Username = Username
         self.password = password
-
     
 
     def save_credential(self):
